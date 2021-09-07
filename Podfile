@@ -16,4 +16,5 @@ target 'PacketTunnel' do
 
   # Pods for PacketTunnel
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'Toast-Swift', '~> 5.0.1'
 end

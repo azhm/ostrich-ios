@@ -1,16 +1,20 @@
 PODS:
   - SwiftyJSON (4.3.0)
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - SwiftyJSON (~> 4.0)
+  - Toast-Swift (~> 5.0.1)
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - SwiftyJSON
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 497b2b82a02146c4d73fa4d011a2ceabbf2dd37b
+PODFILE CHECKSUM: 1df6632d949a3b12042e2721e9e092f41b7c5bf6
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1

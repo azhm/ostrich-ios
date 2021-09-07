@@ -45,7 +45,7 @@ class TrojanCinfig{
             [
                 "protocol": "trojan",
                 "settings": [
-                    "address": "fbenpao.top",
+                    "address": "www.walkonbits.site",
                     "password": "251f6edc",
                     "port": 9443
                 ],

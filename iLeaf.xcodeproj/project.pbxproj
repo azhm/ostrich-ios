@@ -3,25 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		012369A68A47497C5BEBEE75 /* Pods_PacketTunnel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFFD758D39D5DE85C3B231A /* Pods_PacketTunnel.framework */; };
 		240B33C521888F7F00CB0B44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B33C421888F7F00CB0B44 /* AppDelegate.swift */; };
 		240B33C721888F7F00CB0B44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B33C621888F7F00CB0B44 /* ViewController.swift */; };
-		240B33CA21888F7F00CB0B44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240B33C821888F7F00CB0B44 /* Main.storyboard */; };
 		240B33CC21888F7F00CB0B44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 240B33CB21888F7F00CB0B44 /* Assets.xcassets */; };
 		240B33CF21888F7F00CB0B44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240B33CD21888F7F00CB0B44 /* LaunchScreen.storyboard */; };
 		240B33DD21888FE600CB0B44 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B33DC21888FE600CB0B44 /* PacketTunnelProvider.swift */; };
 		240B33E221888FE600CB0B44 /* PacketTunnel.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 240B33DA21888FE600CB0B44 /* PacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		240B33E82188907600CB0B44 /* VPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B33E72188907600CB0B44 /* VPNManager.swift */; };
-		240B33EB218897A400CB0B44 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240B33EA218897A400CB0B44 /* NetworkExtension.framework */; };
 		240B33EC2188980900CB0B44 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240B33EA218897A400CB0B44 /* NetworkExtension.framework */; };
 		243B9E0725469C7A0001F98B /* libleaf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 243B9E0625469C7A0001F98B /* libleaf.a */; };
 		243B9E192546A97F0001F98B /* site.dat in Resources */ = {isa = PBXBuildFile; fileRef = 243B9E182546A97F0001F98B /* site.dat */; };
 		63CE4DAA45DB4773948EDF45 /* Pods_iLeaf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 414E3A73B1011EF5E30E29D2 /* Pods_iLeaf.framework */; };
+		84404E2526E63A060080B109 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240B33EA218897A400CB0B44 /* NetworkExtension.framework */; };
+		84404E2826E63A090080B109 /* Pods_PacketTunnel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFFD758D39D5DE85C3B231A /* Pods_PacketTunnel.framework */; };
 		846194E0255BC1ED003C1588 /* TrojanConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846194DF255BC1ED003C1588 /* TrojanConfig.swift */; };
+		8477A8EB26E26C5500DCEA69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8477A8EA26E26C5500DCEA69 /* Main.storyboard */; };
+		848DE09D26E22EBB00EE4D3A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848DE09C26E22EBB00EE4D3A /* Home.storyboard */; };
+		848DE0A026E22F2C00EE4D3A /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848DE09F26E22F2C00EE4D3A /* Setting.storyboard */; };
+		84921C4526E73D6C00065833 /* ToastUntil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84921C4426E73D6C00065833 /* ToastUntil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +66,6 @@
 		240B33C121888F7F00CB0B44 /* iLeaf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLeaf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		240B33C421888F7F00CB0B44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		240B33C621888F7F00CB0B44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		240B33C921888F7F00CB0B44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		240B33CB21888F7F00CB0B44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		240B33CE21888F7F00CB0B44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		240B33D021888F7F00CB0B44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,6 +84,10 @@
 		414E3A73B1011EF5E30E29D2 /* Pods_iLeaf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iLeaf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64BAFC84F542CC488C5F4DFE /* Pods-iLeaf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iLeaf.debug.xcconfig"; path = "Target Support Files/Pods-iLeaf/Pods-iLeaf.debug.xcconfig"; sourceTree = "<group>"; };
 		846194DF255BC1ED003C1588 /* TrojanConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrojanConfig.swift; sourceTree = "<group>"; };
+		8477A8EA26E26C5500DCEA69 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		848DE09C26E22EBB00EE4D3A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		848DE09F26E22F2C00EE4D3A /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		84921C4426E73D6C00065833 /* ToastUntil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastUntil.swift; sourceTree = "<group>"; };
 		8CFFD758D39D5DE85C3B231A /* Pods_PacketTunnel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PacketTunnel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F84C7D603688649D8A3A8457 /* Pods-iLeaf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iLeaf.release.xcconfig"; path = "Target Support Files/Pods-iLeaf/Pods-iLeaf.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,9 +106,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				240B33EB218897A400CB0B44 /* NetworkExtension.framework in Frameworks */,
 				243B9E0725469C7A0001F98B /* libleaf.a in Frameworks */,
-				012369A68A47497C5BEBEE75 /* Pods_PacketTunnel.framework in Frameworks */,
+				84404E2826E63A090080B109 /* Pods_PacketTunnel.framework in Frameworks */,
+				84404E2526E63A060080B109 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,11 +141,14 @@
 				240B33ED2188980900CB0B44 /* iLeaf.entitlements */,
 				240B33C421888F7F00CB0B44 /* AppDelegate.swift */,
 				240B33C621888F7F00CB0B44 /* ViewController.swift */,
-				240B33C821888F7F00CB0B44 /* Main.storyboard */,
 				240B33CB21888F7F00CB0B44 /* Assets.xcassets */,
 				240B33CD21888F7F00CB0B44 /* LaunchScreen.storyboard */,
 				240B33D021888F7F00CB0B44 /* Info.plist */,
 				240B33E72188907600CB0B44 /* VPNManager.swift */,
+				848DE09C26E22EBB00EE4D3A /* Home.storyboard */,
+				848DE09F26E22F2C00EE4D3A /* Setting.storyboard */,
+				8477A8EA26E26C5500DCEA69 /* Main.storyboard */,
+				84921C4426E73D6C00065833 /* ToastUntil.swift */,
 			);
 			path = iLeaf;
 			sourceTree = "<group>";
@@ -185,7 +194,6 @@
 				64BAFC84F542CC488C5F4DFE /* Pods-iLeaf.debug.xcconfig */,
 				F84C7D603688649D8A3A8457 /* Pods-iLeaf.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -291,8 +299,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				240B33CF21888F7F00CB0B44 /* LaunchScreen.storyboard in Resources */,
+				8477A8EB26E26C5500DCEA69 /* Main.storyboard in Resources */,
+				848DE09D26E22EBB00EE4D3A /* Home.storyboard in Resources */,
+				848DE0A026E22F2C00EE4D3A /* Setting.storyboard in Resources */,
 				240B33CC21888F7F00CB0B44 /* Assets.xcassets in Resources */,
-				240B33CA21888F7F00CB0B44 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +387,7 @@
 			files = (
 				240B33C721888F7F00CB0B44 /* ViewController.swift in Sources */,
 				240B33E82188907600CB0B44 /* VPNManager.swift in Sources */,
+				84921C4526E73D6C00065833 /* ToastUntil.swift in Sources */,
 				240B33C521888F7F00CB0B44 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,14 +412,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		240B33C821888F7F00CB0B44 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				240B33C921888F7F00CB0B44 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		240B33CD21888F7F00CB0B44 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -610,7 +613,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/PacketTunnel/Leaf-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -644,7 +647,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/PacketTunnel/Leaf-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
