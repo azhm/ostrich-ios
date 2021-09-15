@@ -8,7 +8,7 @@
 	</array>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.org.ostrich.f</string>
+		<string>group.myway.ostrich</string>
 	</array>
 </dict>
 </plist>

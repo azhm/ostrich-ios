@@ -17,7 +17,7 @@
                BlueprintIdentifier = "240B33C021888F7F00CB0B44"
                BuildableName = "iLeaf.app"
                BlueprintName = "iLeaf"
-               ReferencedContainer = "container:ileaf.xcodeproj">
+               ReferencedContainer = "container:iLeaf.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,7 +47,7 @@
             BlueprintIdentifier = "240B33C021888F7F00CB0B44"
             BuildableName = "iLeaf.app"
             BlueprintName = "iLeaf"
-            ReferencedContainer = "container:ileaf.xcodeproj">
+            ReferencedContainer = "container:iLeaf.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "240B33C021888F7F00CB0B44"
             BuildableName = "iLeaf.app"
             BlueprintName = "iLeaf"
-            ReferencedContainer = "container:ileaf.xcodeproj">
+            ReferencedContainer = "container:iLeaf.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,7 +1,7 @@
 import NetworkExtension
 import SwiftyJSON
 
-let appGroup = "group.org.ostrich.f"
+let appGroup = "group.myway.ostrich"
 let share = TrojanCinfig.share
 class PacketTunnelProvider: NEPacketTunnelProvider {
     override func startTunnel(options: [String : NSObject]?, completionHandler: @escaping (Error?) -> Void) {
@@ -9,9 +9,14 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         NSLog("-------PacketTunnelProvider--------")
            setTunnelNetworkSettings(tunnelNetworkSettings) { [weak self] error in
             let tunFd = self?.packetFlow.value(forKeyPath: "socket.fileDescriptor") as! Int32
-            NSLog("\(tunFd)")//打印tun设备的文件描述符
+            NSLog("\(tunFd)")//打印tun设备的文件描述符"
             //将ios tun设备的文件描述符写入配置文件
             share.trojanJson["inbounds"][0]["settings"]["fd"] = JSON(tunFd)
+            let shareDefault = UserDefaults(suiteName: "group.myway.ostrich")
+            let ip = shareDefault?.string(forKey: "ip")
+            let port = shareDefault?.integer(forKey: "port")
+            share.trojanJson["outbounds"][2]["settings"]["address"] = JSON(ip!)
+            share.trojanJson["outbounds"][2]["settings"]["port"] = JSON(port!)
             //将json对象转换成json字符串
             let confWithFd = JSON(share.trojanJson).description
             NSLog("-----json-----\(confWithFd)")
