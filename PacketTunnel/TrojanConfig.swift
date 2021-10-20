@@ -12,8 +12,7 @@ class TrojanCinfig{
     static let share = TrojanCinfig()
     var trojanJson: JSON = [
         "log": [
-            "level": "info",
-            "output": "console"
+            "level": "trace"
         ],
         "dns": [
             "servers": [
@@ -21,14 +20,16 @@ class TrojanCinfig{
                 "8.8.8.8"
             ]
         ],
-        "inbounds": [[
-            "protocol": "tun",
-            "settings": [
-                "fd": 0
-            ]
+        "inbounds": [
+            [
+                "protocol": "tun",
+                "settings": [
+                    "fd": 0
+                ]
             ]
         ],
-        "outbounds": [[
+        "outbounds": [
+            [
                 "protocol": "chain",
                 "settings": [
                     "actors": [
@@ -40,18 +41,49 @@ class TrojanCinfig{
             ],
             [
                 "protocol": "tls",
+                "settings": [
+                    "serverName": "walkonbit.site"
+                ],
                 "tag": "trojan_tls"
             ],
             [
                 "protocol": "trojan",
                 "settings": [
-                    "address": "www.walkonbits.site",
+                    "address": "walkonbit.site",
                     "password": "251f6edc",
                     "port": 9443
                 ],
                 "tag": "trojan"
+            ],
+            [
+                "protocol": "direct",
+                "tag": "direct_out"
             ]
-
+        ],
+        "router": [
+            "domainResolve": true,
+            "rules": [
+                [
+                    "ip": [
+                        "8.8.4.4",
+                        "1.1.1.1",
+                        "8.8.8.8"
+                    ],
+                    "target": "direct_out"
+                ],
+                [
+                    "external": [
+                        "site:./site.dat:cn"
+                    ],
+                    "target": "direct_out"
+                ],
+                [
+                    "external": [
+                        "mmdb:./geo.mmdb:cn"
+                    ],
+                    "target": "direct_out"
+                ]
+            ]
         ]
     ]
     
