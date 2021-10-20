@@ -5,7 +5,7 @@ let appGroup = "group.myway.ostrich"
 let share = TrojanCinfig.share
 class PacketTunnelProvider: NEPacketTunnelProvider {
     let config = """
-               {
+    {
                 "log": {
                     "level": "trace"
                 },
@@ -21,29 +21,13 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
                         "fd": REPLACE-ME-WITH-THE-FD
                     }
                 }],
-                "outbounds": [{
-                        "protocol": "chain",
-                        "settings": {
-                            "actors": [
-                                "trojan_tls",
-                                "trojan"
-                            ]
-                        },
-                        "tag": "trojan_out"
-                    },
-                    {
-                        "protocol": "tls",
-                        "settings": {
-                            "serverName":"walkonbit.site"
-                        },
-                        "tag": "trojan_tls"
-                    },
+                "outbounds": [
                     {
                         "protocol": "trojan",
                         "settings": {
-                            "address":"walkonbit.site",
+                            "address": "www.walkonbits.site",
                             "password": "251f6edc",
-                            "port":9443
+                            "port": 9443
                         },
                         "tag": "trojan"
                     },
@@ -51,27 +35,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
                       "protocol": "direct",
                       "tag": "direct_out"
                     }
-                ],
-                "router": {
-                    "domainResolve": true,
-                    "rules": [{
-                    "ip": ["8.8.4.4", "1.1.1.1", "8.8.8.8"],
-                    "target": "direct_out"
-                     },
-                    {
-                       "external": [
-                         "site:./site.dat:cn"
-                       ],
-                       "target": "direct_out"
-                     },
-                     {
-                       "external": [
-                         "mmdb:./geo.mmdb:cn"
-                       ],
-                       "target": "direct_out"
-                     }
-                    ]
-                }
+                ]
                 }
 
     """
@@ -80,23 +44,23 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         NSLog("-------PacketTunnelProvider--------")
            setTunnelNetworkSettings(tunnelNetworkSettings) { [weak self] error in
             let tunFd = self?.tunnelFileDescriptor
-//            let confWithFd = self?.config.replacingOccurrences(of: "REPLACE-ME-WITH-THE-FD", with:String(tunFd!))
+            let confWithFd = self?.config.replacingOccurrences(of: "REPLACE-ME-WITH-THE-FD", with:String(tunFd!))
 //            将ios tun设备的文件描述符写入配置文件
-            share.trojanJson["inbounds"][0]["settings"]["fd"] = JSON(tunFd!)
-            let shareDefault = UserDefaults(suiteName: "group.myway.ostrich")
-            let ip = shareDefault?.string(forKey: "ip")
-            let port = shareDefault?.integer(forKey: "port")
-            share.trojanJson["outbounds"][1]["settings"]["serverName"] = JSON(ip!)
-            share.trojanJson["outbounds"][2]["settings"]["address"] = JSON(ip!)
-            share.trojanJson["outbounds"][2]["settings"]["port"] = JSON(port!)
+//            share.trojanJson["inbounds"][0]["settings"]["fd"] = JSON(tunFd!)
+//            let shareDefault = UserDefaults(suiteName: "group.myway.ostrich")
+//            let ip = shareDefault?.string(forKey: "ip")
+//            let port = shareDefault?.integer(forKey: "port")
+//            share.trojanJson["outbounds"][1]["settings"]["serverName"] = JSON(ip!)
+//            share.trojanJson["outbounds"][2]["settings"]["address"] = JSON(ip!)
+//            share.trojanJson["outbounds"][2]["settings"]["port"] = JSON(port!)
             //将json对象转换成json字符串
 //            NSLog("-----string-----\(share.trojanJson)")
-            NSLog("-----json-----\(JSON(share.trojanJson).description)")
-            let confWithFd = JSON(share.trojanJson).description
+//            NSLog("-----json-----\(JSON(share.trojanJson).description)")
+            let json = JSON(confWithFd).description
             let url = FileManager().containerURL(forSecurityApplicationGroupIdentifier: appGroup)!.appendingPathComponent("running_config.json")
                          do {
                              NSLog("succed to write config file")
-                             try confWithFd.write(to: url, atomically: false, encoding: .utf8)
+                             try json.write(to: url, atomically: false, encoding: .utf8)
                          } catch {
                              NSLog("fialed to write config file \(error)")
                          }

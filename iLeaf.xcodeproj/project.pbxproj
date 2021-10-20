@@ -25,7 +25,7 @@
 		848DE0A026E22F2C00EE4D3A /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848DE09F26E22F2C00EE4D3A /* Setting.storyboard */; };
 		84921C4526E73D6C00065833 /* ToastUntil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84921C4426E73D6C00065833 /* ToastUntil.swift */; };
 		84921C4D26E8541200065833 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84921C4C26E8541200065833 /* SetViewController.swift */; };
-		D6008F82271FCBC0004383DA /* libleaf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6008F81271FCBC0004383DA /* libleaf.a */; };
+		D6008F8527204098004383DA /* libostrich.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6008F8427204098004383DA /* libostrich.a */; };
 		D697F0C3271FA20A00D11EE8 /* geo.mmdb in Resources */ = {isa = PBXBuildFile; fileRef = D697F0C2271FA20900D11EE8 /* geo.mmdb */; };
 /* End PBXBuildFile section */
 
@@ -90,8 +90,8 @@
 		84921C4426E73D6C00065833 /* ToastUntil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastUntil.swift; sourceTree = "<group>"; };
 		84921C4C26E8541200065833 /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		8CFFD758D39D5DE85C3B231A /* Pods_PacketTunnel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PacketTunnel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6008F81271FCBC0004383DA /* libleaf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libleaf.a; sourceTree = "<group>"; };
-		D6008F83271FCBC9004383DA /* leaf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = leaf.h; sourceTree = "<group>"; };
+		D6008F8427204098004383DA /* libostrich.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libostrich.a; path = ../../../tun2ostrich/target/universal/release/libostrich.a; sourceTree = "<group>"; };
+		D6008F86272040A2004383DA /* ostrich.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ostrich.h; path = ../../../tun2ostrich/target/universal/release/ostrich.h; sourceTree = "<group>"; };
 		D697F0C2271FA20900D11EE8 /* geo.mmdb */ = {isa = PBXFileReference; lastKnownFileType = file; name = geo.mmdb; path = ../../leaf/target/debug/geo.mmdb; sourceTree = "<group>"; };
 		F84C7D603688649D8A3A8457 /* Pods-iLeaf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iLeaf.release.xcconfig"; path = "Target Support Files/Pods-iLeaf/Pods-iLeaf.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,7 +112,7 @@
 			files = (
 				84404E2826E63A090080B109 /* Pods_PacketTunnel.framework in Frameworks */,
 				84404E2526E63A060080B109 /* NetworkExtension.framework in Frameworks */,
-				D6008F82271FCBC0004383DA /* libleaf.a in Frameworks */,
+				D6008F8527204098004383DA /* libostrich.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,8 +186,8 @@
 		24B9C1FB24DEDEB40057293C /* libleaf */ = {
 			isa = PBXGroup;
 			children = (
-				D6008F83271FCBC9004383DA /* leaf.h */,
-				D6008F81271FCBC0004383DA /* libleaf.a */,
+				D6008F86272040A2004383DA /* ostrich.h */,
+				D6008F8427204098004383DA /* libostrich.a */,
 			);
 			path = libleaf;
 			sourceTree = "<group>";
